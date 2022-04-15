@@ -8,7 +8,7 @@
 		<servlet-name>DispatchServlet</servlet-name>
 		<display-name>DispatchServlet</display-name>
 		<description></description>
-		<servlet-class>servlets.DispatchServlet</servlet-class>
+		<servlet-class>it.engineering.web.zadatak.servlets.DispatchServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>DispatchServlet</servlet-name>
