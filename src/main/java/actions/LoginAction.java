@@ -15,7 +15,7 @@ public class LoginAction implements ActionInterface {
 	@Override
 	public void executeRequest(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		HttpSession session = req.getSession();
-		if (session.getAttribute("loggedIn") == null) {
+		if (session.getAttribute("loggedIn") == null  || (boolean) session.getAttribute("loggedIn") == false) {
 			String username = (String) req.getAttribute("username");
 			String password = (String) req.getAttribute("password");
 			Korisnik k = new Korisnik();
@@ -24,7 +24,7 @@ public class LoginAction implements ActionInterface {
 			KorisnikController kc = new KorisnikController();
 			kc.getAll().forEach(korisnik -> {
 				if (korisnik.getUsername().equals(k.getUsername()) && korisnik.getPassword().equals(k.getPassword())) {
-					req.setAttribute("loggedIn", true);
+					session.setAttribute("loggedIn", true);
 					req.setAttribute("username", korisnik.getUsername());
 				} else {
 					req.setAttribute("error", "Invalid login credentials. Please try again.");
@@ -37,7 +37,7 @@ public class LoginAction implements ActionInterface {
 			});
 		}
 		try {
-			req.getRequestDispatcher("/app/home").forward(req, res);
+			req.getRequestDispatcher("/app/home.jsp").forward(req, res);
 		} catch (ServletException | IOException e) {
 			e.printStackTrace();
 		}

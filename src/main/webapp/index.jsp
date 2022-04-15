@@ -17,7 +17,7 @@
 
 	 <c:choose>
 		<c:when test="${(sessionScope.loggedIn == null) || (sessionScope.loggedIn == false)}">
-			<form action="/app/login">
+			<form action="/zadatak/app/login" method="POST">
 				<label>Username<input type="text" name="username"></label>
 				<label>Password<input type="password" name="password"></label>
 				<input type="submit" value="Log In">

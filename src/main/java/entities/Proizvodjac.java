@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Proizvodjac {
@@ -16,6 +18,8 @@ public class Proizvodjac {
 	private Integer pib;
 	private Integer maticniBroj;
 	private String adresa;
+	@OneToOne
+	@JoinColumn(name = "mesto_id")
 	private Mesto mesto;
 	
 	public Proizvodjac() {

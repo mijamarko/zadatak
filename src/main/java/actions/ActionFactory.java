@@ -5,15 +5,17 @@ public class ActionFactory {
 	public static ActionInterface createAction(String path) {
 		ActionInterface action = null;
 		switch(path) {
-		case "/login":
+		case "/app/login":
 			action = new LoginAction();
 			break;
-		case "/logout":
+		case "/app/logout":
 			action = new LogoutAction();
 			break;
-		case "/list":
+		case "/app/home":
+			action = new HomeAction();
+		case "/app/list":
 			break;
-		case "/view":
+		case "/app/view":
 			break;
 		}
 		
