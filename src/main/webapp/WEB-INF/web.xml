@@ -4,6 +4,9 @@
 
 <web-app>
 	<display-name>Archetype Created Web Application</display-name>
+	<listener>
+		<listener-class>it.engineering.web.zadatak.listeners.MainContextListener</listener-class>
+	</listener>
 	<servlet>
 		<servlet-name>DispatchServlet</servlet-name>
 		<display-name>DispatchServlet</display-name>
