@@ -9,4 +9,6 @@ public interface WebConstants {
 	
 	public static final String PATH_LOGOUT = "/logout";
 
+	public static final String PAGE_HOME = "/WEB-INF/pages/home.jsp";
+
 }
