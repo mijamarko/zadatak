@@ -25,9 +25,9 @@ public class Manufacturer {
 	@JoinColumn(name = "city_id")
 	private City city;
 
-	private Manufacturer() {}
+	public Manufacturer() {}
 
-	private Manufacturer(String pib, String pid, String address, City city) {
+	public Manufacturer(String pib, String pid, String address, City city) {
 		this.pib = pib;
 		this.pid = pid;
 		this.address = address;

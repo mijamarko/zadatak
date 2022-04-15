@@ -14,9 +14,9 @@ public class City {
 	private Long zipCode;
 	private String name;
 	
-	private City() {}
+	public City() {}
 
-	private City(Long zipCode, String name) {
+	public City(Long zipCode, String name) {
 		this.zipCode = zipCode;
 		this.name = name;
 	}
