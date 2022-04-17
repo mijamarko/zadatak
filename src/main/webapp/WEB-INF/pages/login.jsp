@@ -11,16 +11,19 @@
 <title>Login</title>
 </head>
 <body>
-<div>
-	<form action="/zadatak/app/login" method="POST">
-	<label>Username<input type="text" id="username" name="username"/></label>
-	<label>Password<input type="password" id="password" name="password"/></label>
-	<input type="submit" value="Log In"/>
-	<c:if test="${login_failed == true}">
+	<header>
+		<jsp:include page="/WEB-INF/fragments/header.jsp" flush="true" />
+	</header>
+	<div>
+		<form action="/zadatak/app/login" method="POST">
+			<label>Username<input type="text" id="username"
+				name="username" /></label> <label>Password<input type="password"
+				id="password" name="password" /></label> <input type="submit" value="Log In" />
+			<c:if test="${login_failed == true}">
 		${error_message}
 	</c:if>
-	</form>
-</div>
+		</form>
+	</div>
 
 </body>
 </html>
