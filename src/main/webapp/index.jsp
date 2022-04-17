@@ -11,6 +11,7 @@
 </head>
 <body>
 	<h1>hello</h1>
-	<c:redirect url="/app/login" />
+	<c:if test="${sessionScope.loggedInUser == null}"><c:redirect url="/app/login" /></c:if>
+	<c:if test="${sessionScope.loggedInUser != null }"><c:redirect url="/app/home" /></c:if>
 </body>
 </html>

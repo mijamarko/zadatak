@@ -14,6 +14,9 @@ public class ActionFactory {
 		case WebConstants.PATH_LOGOUT:
 			action = new LogoutAction();
 			break;
+		case WebConstants.PATH_HOME:
+			action = new HomeAction();
+			break;
 		default:
 			break;
 		}

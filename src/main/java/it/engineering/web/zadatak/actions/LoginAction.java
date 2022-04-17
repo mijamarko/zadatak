@@ -1,5 +1,7 @@
 package it.engineering.web.zadatak.actions;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -17,6 +19,7 @@ public class LoginAction implements Action {
 		userService = new UserServiceImpl();
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public String execute(HttpServletRequest req, HttpServletResponse res) {
 		if (req.getMethod() == "GET") {
@@ -26,7 +29,9 @@ public class LoginAction implements Action {
 			if (user != null) {
 				HttpSession session = req.getSession(true);
 				session.setAttribute("loggedInUser", user);
-				return WebConstants.PAGE_HOME;
+				ArrayList<UserDTO> users = (ArrayList<UserDTO>) session.getServletContext().getAttribute("loggedInUsers");
+				users.add(user);
+				return WebConstants.PAGE_INDEX;
 			} else {
 				req.setAttribute("login_failed", true);
 				req.setAttribute("error_message", "No such user. Please try again.");

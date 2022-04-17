@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
-import it.engineering.web.zadatak.entities.User;
+import it.engineering.web.zadatak.dto.UserDTO;
 
 /**
  * Application Lifecycle Listener implementation class MainContextListener
@@ -30,7 +30,9 @@ public class MainContextListener implements ServletContextListener {
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent sce)  { 
-         sce.getServletContext().setAttribute("loggedInUsers", new ArrayList<User>());
+         sce.getServletContext().setAttribute("loggedInUsers", new ArrayList<UserDTO>());
     }
+    
+    
 	
 }
