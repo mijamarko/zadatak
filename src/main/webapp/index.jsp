@@ -11,5 +11,6 @@
 </head>
 <body>
 	<h1>hello</h1>
+	<c:redirect url="/app/login" />
 </body>
 </html>

@@ -28,6 +28,7 @@ public class LoginAction implements Action {
 				session.setAttribute("loggedInUser", user);
 				return WebConstants.PAGE_HOME;
 			} else {
+				req.setAttribute("login_failed", true);
 				req.setAttribute("error_message", "No such user. Please try again.");
 				return WebConstants.PAGE_LOGIN;
 			}

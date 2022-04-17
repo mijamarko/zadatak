@@ -2,10 +2,9 @@ package it.engineering.web.zadatak.dao.impl;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-
 import it.engineering.web.zadatak.dao.UserDAO;
 import it.engineering.web.zadatak.entities.User;
+import jakarta.persistence.EntityManager;
 
 public class JpaUserDAOImpl implements UserDAO {
 	
@@ -17,7 +16,7 @@ public class JpaUserDAOImpl implements UserDAO {
 
 	@Override
 	public List<User> getAll() {
-		return em.createQuery("SELECT u FROM USER u", User.class).getResultList();
+		return em.createQuery("SELECT u FROM User u", User.class).getResultList();
 	}
 
 

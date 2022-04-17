@@ -2,14 +2,13 @@ package it.engineering.web.zadatak.service.impl;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.Persistence;
-
 import it.engineering.web.zadatak.dao.UserDAO;
 import it.engineering.web.zadatak.dao.impl.JpaUserDAOImpl;
 import it.engineering.web.zadatak.dto.UserDTO;
 import it.engineering.web.zadatak.entities.User;
 import it.engineering.web.zadatak.service.UserService;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Persistence;
 
 public class UserServiceImpl implements UserService {
 	private EntityManager em;
@@ -33,7 +32,5 @@ public class UserServiceImpl implements UserService {
 		}
 		return null;
 	}
-	
-	
 
 }
