@@ -25,7 +25,7 @@
 					<tr>
 						<td>${city.zipCode}</td>
 						<td>${city.name}</td>
-						<td><a href="#">View</a><a href="#">Edit</a><a href="#">Delete</a></td>
+						<td><a href="/zadatak/app/cities/view?${city.zipCode}">View</a><a href="#">Edit</a><a href="#">Delete</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

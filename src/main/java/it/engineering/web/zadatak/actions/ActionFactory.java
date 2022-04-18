@@ -17,6 +17,9 @@ public class ActionFactory {
 		case WebConstants.PATH_HOME:
 			action = new HomeAction();
 			break;
+		case WebConstants.PATH_VIEW_CITIES:
+			action = new CityAction();
+			break;
 		default:
 			break;
 		}
