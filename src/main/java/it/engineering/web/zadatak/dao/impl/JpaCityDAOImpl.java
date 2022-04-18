@@ -21,7 +21,7 @@ public class JpaCityDAOImpl implements CityDAO {
 
 	@Override
 	public City findById(Long zipCode) {
-		return (City) em.createQuery("SELECT c FROM City c WHERE c.zip_code ='" + zipCode +"'", City.class);
+		return em.createQuery("SELECT c FROM City c WHERE c.zipCode ='" + zipCode +"'", City.class).getSingleResult();
 	}
 
 	@Override
