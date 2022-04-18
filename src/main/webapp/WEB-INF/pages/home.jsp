@@ -6,10 +6,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Homepage</title>
 </head>
 <body>
-<h2>HOME</h2>
+	<header>
+		<jsp:include page="/WEB-INF/fragments/header.jsp" flush="true" />
+	</header>
 
 </body>
 </html>
